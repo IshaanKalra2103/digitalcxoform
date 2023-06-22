@@ -7,9 +7,6 @@
 
     <!-- CSS StyleSheets -->
 
-    <!-- Custom -->
-    <link rel="stylesheet" href="styles.css" />
-
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -18,9 +15,22 @@
       crossorigin="anonymous"
     />
 
+    <!-- Custom -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>DigitalCXO.Live</title>
 
     <!-- Javascript Scripts -->
+
+   
 
     <!-- Bootstrap JS -->
 
@@ -47,96 +57,172 @@
       crossorigin="anonymous"
     ></script>
 
+    
+
     <!-- Spreadsheet API -->
-    <script src="api.js"></script>
+    <script src="api2.js"></script>
+
   </head>
   <body>
-    <form id="myForm">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input
-          name="Email Address"
-          type="email"
-          class="form-control"
-          id="email"
-          
-          placeholder="Enter email"
-        />
-        <small id="emailHelp" class="form-text text-muted"
-          >We'll never share your email with anyone else.</small
-        >
-      </div>
-      <label>Your Name</label>
-		  <input name="Your Name" 
-      type="text"
-      class="form-control"
-      id="name"
-      aria-describedby="emailHelp"
-      placeholder="Enter your name"/>
-      </div>
-      <div class="form-group">
-      <label>Mobile number</label>
-		  <input name="Mobile number"  type="text"
-      class="form-control"
-      id="phone"
-      aria-describedby="emailHelp"/>
-        
-      </div>
-      <div class="form-group">
-        <label>Your LinkedIn link</label>
-		    <input name="Your LinkedIn link" type="text"
-        class="form-control"
-        id="linkedin"
-        aria-describedby="emailHelp"/>
-
-      </div>
-      <div class="form-group">
-        <label>Your current company</label>
-		<input name="Your current company"  type="text"
-    class="form-control"
-    id="company"
-    aria-describedby="emailHelp"/>
-      </div>
-      <div class="form-group">
-        <label>Your designation or role</label>
-		<input name="Your designation or role"  type="text"
-    class="form-control"
-    id="role"
-    aria-describedby="emailHelp"/>
-
+    <div class="arrow-up">
+      <div class="circle">
+        <h1>
+          ↑
+        </h1>
       </div>
       
-      
-      <div class="form-group">
-        <label>Functional area</label>
-        <input name="Functional area" />
-        <select class="form-control">
-          <option>Tech - CXO (CIO, CDO, CTO, CISO)</option>
-          <option>Business - CXO (Leadership)</option>
-          <option>Startup - CXO</option>
-          <option>Tech - Architect</option>
-          <option>Tech - Project Manager</option>
-          <option>Tech - Programmer</option>
-          <option>Business - Sales</option>
-          <option>Business - Marketing</option>
-          <option>Business - Alliance</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Top 3 skills</label>
-		  <input name="Top 3 skills" />
+    </div>
+    <div class="main">
 
-      </div>
-      <div class="form-group">
-        <label>Any other areas of interest that you want from this forum</label>
-		<input name="Any other areas of interest that you want from this forum" />
+      
+      <form id="myForm">
+        <div class="form-group active">
+          <label for="exampleInputEmail1"
+            >Welcome to Digital CXO.Live Community! Please enter your email
+            address to register.</label
+          >
+          <input
+            name="Email Address"
+            type="email"
+            class="form-input"
+            id="email"
+            placeholder="name@example.com"
 
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input
+            name="Your Name"
+            type="text"
+            class="form-input"
+            id="name"
+            aria-describedby="emailHelp"
+            placeholder="Type your answer here..."
+
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Mobile number</label>
+          <input
+            name="Mobile number"
+            type="text"
+            class="form-input"
+            id="phone"
+            placeholder="Type your answer here..."
+
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Your LinkedIn link</label>
+          <input
+            name="Your LinkedIn link"
+            type="text"
+            class="form-input"
+            id="linkedin"
+            placeholder="Type your answer here..."
+
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Your current company</label>
+          <input
+            name="Your current company"
+            type="text"
+            class="form-input"
+            id="company"
+            placeholder="Type your answer here..."
+
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Your designation or role</label>
+          <input
+            name="Your designation or role"
+            type="text"
+            class="form-input"
+            id="role"
+            placeholder="Type your answer here..."
+
+            required
+          />
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+
+        <div class="form-group">
+          <label>Functional area</label>
+
+          <select class="form-input" id="functional-area" required>
+            <option value="nulls" selected disabled>
+              Select an option
+            </option>
+            <option value="Tech - CXO (CIO, CDO, CTO, CISO)">
+              Tech - CXO (CIO, CDO, CTO, CISO)
+            </option>
+            <option value="Startup - CXO">Startup - CXO</option>
+            <option value="Tech - Architect">Tech - Architect</option>
+            <option value="Tech - Project Manager">
+              Tech - Project Manager
+            </option>
+            <option value="Tech - Programmer">Tech - Programmer</option>
+            <option value="Business - CXO (Leadership)">
+              Business - CXO (Leadership)
+            </option>
+            <option value="Business - Sales">Business - Sales</option>
+            <option value="Business - Marketing">Business - Marketing</option>
+            <option value="Business - Alliance">Business - Alliance</option>
+          </select>
+
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label>Top 3 skills</label>
+          <input
+            name="Top 3 skills"
+            type="text"
+            class="form-input"
+            id="skills"
+            placeholder="Type your answer here..."
+            required
+          />
+
+          <button type="button" class="btn btn-outline next-btn">OK✓</button>
+        </div>
+        <div class="form-group">
+          <label
+            >Any other areas of interest that you want from this forum</label
+          >
+          <input
+            name="Any other areas of interest that you want from this forum"
+            type="text"
+            class="form-input"
+            id="other"
+            placeholder="Type your answer here..."
+          />
+        </div>
+      </form>
+      <button class="btn sbmt hide" onclick="SubForm()">Submit</button>
+      
+    </div>
+
+    <div class="arrow-down">
+      <div class="circle">
+        <h1>↓</h1>
       </div>
       
-    </form>
-    <button class="btn btn-primary" onclick="SubForm()">➞</button>
+    </div>
   </body>
 
-  <!-- Additional JS -->
-  <script src="index.js"></script>
+   <!-- Additional JS -->
+   <script src="index.js"></script>
 </html>
