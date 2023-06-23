@@ -30,8 +30,6 @@
 
     <!-- Javascript Scripts -->
 
-   
-
     <!-- Bootstrap JS -->
 
     <script
@@ -57,29 +55,20 @@
       crossorigin="anonymous"
     ></script>
 
-    
-
     <!-- Spreadsheet API -->
     <script src="api2.js"></script>
-
   </head>
   <body>
     <div class="arrow-up">
       <div class="circle">
-        <h1>
-          ↑
-        </h1>
+        <h1 id="arrow-up">↑</h1>
       </div>
-      
     </div>
     <div class="main">
-
-      
       <form id="myForm">
         <div class="form-group active">
           <label for="exampleInputEmail1"
-            >Welcome to Digital CXO.Live Community! Please enter your email
-            address to register.</label
+            >Discover Digital CXO.Live! Register with your email.</label
           >
           <input
             name="Email Address"
@@ -87,7 +76,6 @@
             class="form-input"
             id="email"
             placeholder="name@example.com"
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -101,7 +89,6 @@
             id="name"
             aria-describedby="emailHelp"
             placeholder="Type your answer here..."
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -114,7 +101,6 @@
             class="form-input"
             id="phone"
             placeholder="Type your answer here..."
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -127,7 +113,6 @@
             class="form-input"
             id="linkedin"
             placeholder="Type your answer here..."
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -140,7 +125,6 @@
             class="form-input"
             id="company"
             placeholder="Type your answer here..."
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -153,7 +137,6 @@
             class="form-input"
             id="role"
             placeholder="Type your answer here..."
-
             required
           />
           <button type="button" class="btn btn-outline next-btn">OK✓</button>
@@ -163,9 +146,7 @@
           <label>Functional area</label>
 
           <select class="form-input" id="functional-area" required>
-            <option value="nulls" selected disabled>
-              Select an option
-            </option>
+            <option value="nulls" selected disabled>Select an option</option>
             <option value="Tech - CXO (CIO, CDO, CTO, CISO)">
               Tech - CXO (CIO, CDO, CTO, CISO)
             </option>
@@ -212,17 +193,15 @@
         </div>
       </form>
       <button class="btn sbmt hide" onclick="SubForm()">Submit</button>
-      
     </div>
 
     <div class="arrow-down">
       <div class="circle">
-        <h1>↓</h1>
+        <h1 id="arrow-down">↓</h1>
       </div>
-      
     </div>
   </body>
 
-   <!-- Additional JS -->
-   <script src="index.js"></script>
+  <!-- Additional JS -->
+  <script src="index.js"></script>
 </html>
