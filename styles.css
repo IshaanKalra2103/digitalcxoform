@@ -26,6 +26,8 @@ body {
   }
 }
 
+
+
 .main {
   margin: 0 auto;
   position: relative;
@@ -34,6 +36,22 @@ body {
   background-color: #262626;
   font-size: 22px;
   
+}
+
+a{
+  color: #f3efe6;
+  font-size: 60%;
+  padding: 20px 0;
+}
+a:hover{
+  color: #8f7645;
+  text-decoration: none;
+}
+
+small{
+  font-size: 1rem;
+  opacity: .5;
+  width: 10%;
 }
 
 label {
@@ -91,53 +109,51 @@ button:hover {
 
 .next-btn {
   margin: 20px 0;
-
 }
 
-.circle{
+.rectangle{
   height: 60px;
   width: 60px;
   border: 2px solid #f3efe6;
-  border-radius: 50px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   padding-top: 6px;
 }
-.arrow-up{
-  transform: scale(.65);
-  display: inline-block;
-  position: relative;
-  left: 46%;
-  margin-top: 20px;
-  opacity: .5;
-  transition: all .2s ease-in-out;
+
+.arrows{
+  display: flex;
+  justify-content:flex-end;
+  margin: 10px 30px;
 }
 
-.arrow-down{
+#arrow-up, #arrow-down{
   transform: scale(.65);
-  display: inline-block;
-  margin: 20px;
-  position: relative;
-  left: 46%;
-  top: 22rem;
   opacity: .5;
-  transition: all .2s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-.arrow-up:hover{
+#arrow-up:hover , #arrow-down:hover{
  transform: scale(.8);
- opacity: .75;
+ opacity: 1;
  cursor: pointer;
 }
 
-.arrow-down:hover{
-  transform: scale(.8);
-  opacity: .75;
-  cursor: pointer;
+.header{
+  font-weight: 700;
+  font-size: 3.5rem;
 }
 
-.arrow-up, .arrow-down {
-  transition: transform 0.3s ease;
+.container{
+  display: flex;
+  justify-content: space-between;  
+  border: 2px solid #f3efe6;
+  border-radius: 2px;
+  box-shadow: 0.6em 0.6em 0 0 #e1d9c4;
+  margin: 3rem 0;
+  padding: 1rem;
+  line-height: 40px;
+  max-width: 100%;
 }
 
 
@@ -157,4 +173,12 @@ input:-webkit-autofill:active{
 
 .reveal{
   visibility: visible;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .main{
+    top: 150px;
+  }
 }
