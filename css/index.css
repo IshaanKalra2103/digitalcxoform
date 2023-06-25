@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  font-family: "Karla", sans-serif;
+  color: #f3efe6;
+}
+
+body {
+  background-color: #242324;
+  overflow: hidden;
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.container {
+  position: absolute;
+  top: 52.2vh;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* adjust this to control the width of the container */
+  animation: fadeIn 2s ease-in;
+  font-size: 50px;
+  line-height: 1.2;
+}
+.title {
+  font-size: 10vw;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 3vw;
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+.btn {
+  align-items: center;
+  max-width: 100%;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  border: 1px solid #f3efe6;
+  animation: btnFadeIn 1.5s ease-out forwards;
+  margin: 20px;
+}
+
+.btn:hover {
+  background-color: #f3efe6;
+  color: #8f7645;
+  opacity: 1;
+}
+
+.displace {
+  margin-left: 0.35rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
