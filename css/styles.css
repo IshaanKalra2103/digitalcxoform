@@ -26,8 +26,6 @@ body {
   }
 }
 
-
-
 .main {
   margin: 0 auto;
   position: relative;
@@ -35,22 +33,21 @@ body {
   width: 50%;
   background-color: #262626;
   font-size: 22px;
-  
 }
 
-a{
+a {
   color: #f3efe6;
   font-size: 60%;
   padding: 20px 0;
 }
-a:hover{
+a:hover {
   color: #8f7645;
   text-decoration: none;
 }
 
-small{
+small {
   font-size: 1rem;
-  opacity: .5;
+  opacity: 0.5;
   width: 10%;
 }
 
@@ -60,8 +57,7 @@ label {
   font-weight: 600;
 }
 
-.form-input{
-  
+.form-input {
   width: 100%;
   border: 1px solid #ccc;
   padding: 12px 0;
@@ -69,16 +65,13 @@ label {
   border: none;
   border-bottom: 1px solid #f3efe6;
   border-radius: 2px;
-  opacity: .5;
+  opacity: 0.5;
   box-sizing: border-box;
   background-color: #262626;
   font-size: 1.5rem;
 }
 
-.form-input::placeholder{
-  font-size: 1.5rem;
-    
-}
+
 
 .form-input:focus {
   background-color: #262626;
@@ -88,9 +81,7 @@ label {
   opacity: 1;
 }
 
-
 button {
- 
   color: #f3efe6;
   align-items: center;
   max-width: 100%;
@@ -111,7 +102,7 @@ button:hover {
   margin: 20px 0;
 }
 
-.rectangle{
+.rectangle {
   height: 60px;
   width: 60px;
   border: 2px solid #f3efe6;
@@ -121,32 +112,34 @@ button:hover {
   padding-top: 6px;
 }
 
-.arrows{
+.arrows {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   margin: 10px 30px;
 }
 
-#arrow-up, #arrow-down{
-  transform: scale(.65);
-  opacity: .5;
+#arrow-up,
+#arrow-down {
+  transform: scale(0.65);
+  opacity: 0.5;
   transition: transform 0.3s ease;
 }
 
-#arrow-up:hover , #arrow-down:hover{
- transform: scale(.8);
- opacity: 1;
- cursor: pointer;
+#arrow-up:hover,
+#arrow-down:hover {
+  transform: scale(0.8);
+  opacity: 1;
+  cursor: pointer;
 }
 
-.header{
+.header {
   font-weight: 700;
   font-size: 3.5rem;
 }
 
-.container{
+.container {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   border: 2px solid #f3efe6;
   border-radius: 2px;
   box-shadow: 0.6em 0.6em 0 0 #e1d9c4;
@@ -156,29 +149,26 @@ button:hover {
   max-width: 100%;
 }
 
-
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
 }
 
-.hide{
+.hide {
   visibility: hidden;
 }
 
-.reveal{
+.reveal {
   visibility: visible;
 }
 
-
-
 @media screen and (max-width: 600px) {
-  .main{
-    top: 150px;
+  .main {
+    top: 80px;
   }
 }
