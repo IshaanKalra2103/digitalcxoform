@@ -1,0 +1,38 @@
+********* Template CSS ********* :root {
+  --primary: #f3efe6;
+  --secondary: #262626;
+  --light: #fff;
+  --dark: #262626;
+}
+
+/*** Layout ***/
+
+* {
+  font-family: "Dancing Script", cursive;
+  font-family: "Karla", sans-serif;
+}
+.content {
+  width: 100%;
+  /* margin-left: 250px; */
+  min-height: 100vh;
+  background: var(--dark);
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .content {
+    width: calc(100% - 250px);
+  }
+
+  .content.open {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
