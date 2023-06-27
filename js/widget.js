@@ -24,15 +24,15 @@ keysPromise.then((keys) => {
       lastFiveEntries.forEach((row) => {
         let tr = document.createElement("tr");
         [
-          "Your Name",
-          "Email Address",
-          "Mobile number",
-          "Your LinkedIn link",
-          "Your current company",
-          "Your designation or role",
-          "Top 3 skills",
+          "Name",
+          "Email",
+          "Mobile",
+          "Linkedin",
+          "Company",
+          "Role",
+          "Skills",
           "Functional area",
-          "Any other areas of interest that you want from this forum",
+          "Interests",
           "Timestamp",
         ].forEach((field) => {
           let td = document.createElement("td");

@@ -13,15 +13,15 @@ function SubForm() {
 
   // Collect form data
   var formData = {
-    "Email Address": $("#email").val(),
-    "Your Name": $("#name").val(),
-    "Mobile number": $("#phone").val(),
-    "Your LinkedIn link": $("#linkedin").val(),
-    "Your current company": $("#company").val(),
-    "Your designation or role": $("#role").val(),
+    "Email": $("#email").val(),
+    "Name": $("#name").val(),
+    "Mobile": $("#phone").val(),
+    "Linkedin": $("#linkedin").val(),
+    "Company": $("#company").val(),
+    "Role": $("#role").val(),
     "Functional area": $("#functional-area").val(),
-    "Top 3 skills": $("#skills").val(),
-    "Any other areas of interest that you want from this forum":
+    "Skills": $("#skills").val(),
+    "Interests":
       $("#other").val(),
     Timestamp: timestamp, // Add the timestamp here
   };
