@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-  <body>
+  <body class="fade-in">
     <video autoplay muted loop id="myVideo">
       <source src="/assets/final.mp4" type="video/mp4" />
     </video>
@@ -59,18 +59,6 @@
   </body>
 
   <script>
-    const typingElement = document.querySelector(".typing");
-    const smallTag = document.getElementById("smallTag");
-    const startButton = document.querySelector(".start-btn");
-
-    typingElement.addEventListener("animationend", () => {
-      smallTag.style.display = "inline";
-    });
-
-    smallTag.addEventListener("animationend", () => {
-      startButton.style.display = "inline";
-    });
-
     function pageChange() {
       window.location.href = "form.html";
     }

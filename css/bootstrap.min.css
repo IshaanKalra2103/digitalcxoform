@@ -6381,6 +6381,9 @@ fieldset:disabled .btn {
 .mt-5 {
   margin-top: 3rem !important;
 }
+.mt-6 {
+  margin-top: 4rem !important;
+}
 .mt-auto {
   margin-top: auto !important;
 }

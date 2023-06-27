@@ -10,6 +10,23 @@ body {
   background-color: #242324;
 }
 
+.fade-in {
+  animation: fadeIn ease 2.5s;
+  -webkit-animation: fadeIn ease 2.5s;
+  -moz-animation: fadeIn ease 2.5s;
+  -o-animation: fadeIn ease 2.5s;
+  -ms-animation: fadeIn ease 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #myVideo {
   mix-blend-mode: lighten;
   width: 100vw;
@@ -20,7 +37,7 @@ body {
   top: 0;
   bottom: 0;
   z-index: -1;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .container {
@@ -29,7 +46,6 @@ body {
   left: 62%;
   transform: translate(-50%, -50%);
   width: 80%; /* adjust this to control the width of the container */
-  animation: fadeIn 2s ease-in;
   font-size: 50px;
   line-height: 1.2;
 }
@@ -41,7 +57,7 @@ body {
 .subtitle {
   font-size: 3vw;
   font-weight: 200;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .btn {
@@ -63,13 +79,4 @@ body {
 
 .displace {
   margin-left: 0.35rem;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

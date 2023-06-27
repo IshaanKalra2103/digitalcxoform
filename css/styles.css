@@ -10,19 +10,22 @@
 body {
   background-color: #262626;
   color: #fff;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(0px);
   }
   100% {
     opacity: 1;
-    transform: translateX(20px);
   }
 }
 
@@ -70,8 +73,6 @@ label {
   background-color: #262626;
   font-size: 1.5rem;
 }
-
-
 
 .form-input:focus {
   background-color: #262626;
