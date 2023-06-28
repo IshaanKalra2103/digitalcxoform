@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="assets/favicon-32x32.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,18 +71,22 @@
     .modal-body {
       margin: 20px 0;
     }
+
+    #details-container {
+      visibility: hidden;
+    }
   </style>
 
   <body>
-    <div class="container-fluid position-relative d-flex p-0 fade-in">
+    <div class="container-fluid p-0 fade-in">
       <!-- Content Start -->
       <div class="content">
         <!-- Form Start -->
 
         <div class="container-fluid pt-4 px-4">
-          <div class="row g-4 d-flex justify-content-center ms-6">
-            <div class="col-sm-12 col-xl-6 ">
-              <div class="bg-secondary rounded h-100 p-4 ">
+          <div class="row g-4">
+            <div class="col-sm-12 col-xl-6">
+              <div class="bg-secondary rounded h-100 p-4">
                 <form onsubmit="event.preventDefault(); ">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"
@@ -93,6 +97,7 @@
                       class="form-control"
                       id="email"
                       aria-describedby="emailHelp"
+                      placeholder="Enter your email address to change your responses."
                     />
                   </div>
 
@@ -106,7 +111,10 @@
             </div>
           </div>
 
-          <div class="row g-4 d-flex justify-content-center mt-4" id="details-container">
+          <div
+            class="row g-4 mt-4"
+            id="details-container"
+          >
             <div class="col-sm-12 col-xl-6">
               <div class="bg-secondary rounded h-100 p-4">
                 <div class="mb-3" id="details">

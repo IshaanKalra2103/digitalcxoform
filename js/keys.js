@@ -10,8 +10,9 @@ export const keysPromise = fetch(
     let key = keys.key;
     let serviceID = keys.serviceID;
     let templateID = keys.templateID;
+    let mailchimpID = keys.mailchimpID
 
-    return { sheetID, emailId, key, serviceID, templateID };
+    return { sheetID, emailId, key, serviceID, templateID, mailchimpID};
   })
   .catch((error) => {
     console.error("Error:", error);

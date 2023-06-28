@@ -12,7 +12,7 @@ keysPromise.then((keys) => {
 
   let detailContainer = document.getElementById("details-container");
 
-  detailContainer.style.visibility = "hidden";
+  
   applyBtn.style.visibility = "hidden";
 
   let varId;

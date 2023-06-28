@@ -37,6 +37,10 @@
   }
 }
 
+#details-container{
+  visibility: hidden;
+}
+
 /*** Animation ***/
 .fade-in {
   animation: fadeIn ease 2s;

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="assets/favicon-32x32.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <!-- Google Font -->
@@ -88,14 +88,14 @@
             </div>
             <div class="col-sm-3 col-xl-2">
               <div class="mt-3">
-                <button class="btn btn-lg btn-light" onclick="redirectEdit()">
+                <button class="btn btn-lg btn-light" onclick="redirectSettings()">
                   <i class="fa fa-gear text-primary me-3"></i>Settings
                 </button>
               </div>
             </div>
             <div class="col-sm-3 col-xl-2">
               <div class="mt-3">
-                <button class="btn btn-lg btn-success">
+                <button class="btn btn-lg btn-success" onclick="redirectEdit()">
                   <i class="fa fa-thin fa-paper-plane text-primary me-3"></i
                   >Push Alerts
                 </button>
@@ -199,8 +199,11 @@
       function redirect() {
         window.location.href = "index.html";
       }
-      function redirect() {
-        window.location.href = "edit.html";
+      function redirectEdit() {
+        window.location.href = "release.html";
+      }
+      function redirectSettings() {
+        window.location.href = "setting.html";
       }
     </script>
 

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>🔐Admin Login</title>
+    <title>📤Push Updates</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -45,29 +45,41 @@
           <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
               <div class="bg-secondary rounded h-100 p-4">
-                <form onsubmit="event.preventDefault(); checkDirect();">
+                <h2 class="text-center">New Channel Details</h2>
+                <form onsubmit="event.preventDefault();">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"
-                      >Email address</label
+                      >Channel Name</label
+                    >
+                    <input class="form-control" id="channel-name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Channel Link</label
                     >
                     <input
-                      type="email"
                       class="form-control"
-                      id="email"
+                      id="channel-link"
                       aria-describedby="emailHelp"
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
-                      >Password</label
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Channel Description</label
                     >
-                    <input type="password" class="form-control" id="password" />
+                    <input class="form-control" id="channel-desc" />
                   </div>
 
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      class="btn btn-success"
+                      id="release-button"
+                    >
+                      Release New Channel
+                    </button>
+                  </div>
                 </form>
-
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
               </div>
             </div>
           </div>
@@ -80,6 +92,17 @@
     </div>
 
     <!-- Template Javascript -->
-    <script type="module" src="js/admin.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("t6djYgFTzyzt7g3gA");
+      })();
+    </script>
+
+    <script type="module" src="js/release.js"></script>
   </body>
 </html>
