@@ -16,10 +16,7 @@ $(document).ready(function () {
     if (currentIndex != 8) {
       $(".btn").addClass("hide");
       $(".next-btn").addClass("reveal");
-      
     }
-
-    
 
     showCurrentGroup();
   });
