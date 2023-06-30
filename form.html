@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DigitalCXO.Live</title>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
 
     <!-- CSS StyleSheets -->
 
@@ -70,7 +80,7 @@
     ></script>
 
     <!-- Spreadsheet API -->
-    <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/form.js"></script>
   </head>
   <body class="fade-in">
     <div class="arrows">
@@ -209,13 +219,17 @@
           />
         </div>
       </form>
-      <button class="btn sbmt hide" onclick="SubForm(); sendMail()">
-        Submit
-      </button>
+      <button class="btn hide" id="sbmt-btn">Submit</button>
+    </div>
+
+    <div id="alert-box" class="hide">
+      <div class="alert-content">
+        <p id="alert-message"></p>
+        <button class="btn btn-sm" id="alert-close">Close</button>
+      </div>
     </div>
   </body>
 
   <!-- Additional JS -->
-  <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/email.js"></script>
+  <script type="module" src="./js/animation.js"></script>
 </html>

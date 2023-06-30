@@ -16,7 +16,10 @@ $(document).ready(function () {
     if (currentIndex != 8) {
       $(".btn").addClass("hide");
       $(".next-btn").addClass("reveal");
+      
     }
+
+    
 
     showCurrentGroup();
   });
@@ -27,11 +30,13 @@ $(document).ready(function () {
       console.log(currentIndex);
     }
 
-    if (currentIndex === 8) {
-      $(".btn").removeClass("hide");
-    }
-
     showCurrentGroup();
+
+    if (currentIndex === 8) {
+      setTimeout(function () {
+        $(".btn").removeClass("hide").addClass("fade-in");
+      }, 1000); // delay equal to the duration of the fadeOut animation
+    }
   });
 
   showCurrentGroup();
@@ -53,8 +58,9 @@ $(document).ready(function () {
     console.log(currentIndex);
 
     if (currentIndex === 8) {
-      $(".btn").removeClass("hide");
+      setTimeout(function () {
+        $(".btn").removeClass("hide").addClass("fade-in");
+      }, 1000); // delay equal to the duration of the fadeOut animation
     }
   });
 });
-
