@@ -10,17 +10,17 @@ keysPromise.then((keys) => {
   apiUrl = `https://sheetdb.io/api/v1/${sheetID}`;
 });
 
-let email = $("#email").val();
-let name = $("#name").val();
-let mobile = $("#phone").val();
-let linkedin = $("#linkedin").val();
-let company = $("#company").val();
-let role = $("#role").val();
-let functional = $("#functional-area").val();
-let skills = $("#skills").val();
-let interests = $("#other").val();
-
-function SubForm() {
+function SubForm(
+  email,
+  name,
+  mobile,
+  linkedin,
+  company,
+  role,
+  functional,
+  skills,
+  interests
+) {
   // Get the current date and time
   var timestamp = new Date().toISOString();
 
@@ -53,10 +53,6 @@ function SubForm() {
         showAlert("There was an error :(");
       },
     });
-
-    setTimeout(() => {
-      window.location.href = "greeting.html";
-    }, 2500);
   } else {
     showAlert("API URL is not ready yet. Please try again later.");
   }
@@ -135,10 +131,23 @@ $("#alert-close").click(function () {
   $("#alert-box").addClass("fade-out-custom");
   setTimeout(function () {
     $("#alert-box").addClass("hide");
-  }, 2000); // delay equal to the duration of the fade-out animation
+  }, 2000);
+  
+  setTimeout(() => {
+    window.location.href = "greeting.html";
+  }, 2000);// delay equal to the duration of the fade-out animation
 });
 
 $("#sbmt-btn").click(function () {
+  let email = $("#email").val();
+  let name = $("#name").val();
+  let mobile = $("#phone").val();
+  let linkedin = $("#linkedin").val();
+  let company = $("#company").val();
+  let role = $("#role").val();
+  let functional = $("#functional-area").val();
+  let skills = $("#skills").val();
+  let interests = $("#other").val();
   if (
     email.length === 0 ||
     name.length === 0 ||
@@ -147,12 +156,21 @@ $("#sbmt-btn").click(function () {
     company.length === 0 ||
     role.length === 0 ||
     functional.length === 0 ||
-    skills.length === 0 ||
-    interests.length === 0
+    skills.length === 0
   ) {
     showAlert("Please fill all the details!");
   } else {
-    SubForm();
+    SubForm(
+      email,
+      name,
+      mobile,
+      linkedin,
+      company,
+      role,
+      functional,
+      skills,
+      interests
+    );
     sendMail();
   }
 });
