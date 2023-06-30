@@ -21,7 +21,7 @@ body {
 }
 
 .fade-in-custom {
-  animation: fadeIn ease .08s;
+  animation: fadeIn ease 0.08s;
   -webkit-animation: fadeIn ease 2s;
   -moz-animation: fadeIn ease 2s;
   -o-animation: fadeIn ease 2s;
@@ -37,7 +37,7 @@ body {
   }
 }
 
-.fade-out{
+.fade-out {
   animation: fadeOut ease 2s;
   -webkit-animation: fadeOut ease 2s;
   -moz-animation: fadeOut ease 2s;
@@ -46,7 +46,7 @@ body {
 }
 
 .fade-out-custom {
-  animation: fadeOut ease .08s;
+  animation: fadeOut ease 0.08s;
   -webkit-animation: fadeOut ease 2s;
   -moz-animation: fadeOut ease 2s;
   -o-animation: fadeOut ease 2s;
@@ -61,8 +61,6 @@ body {
     opacity: 0;
   }
 }
-
-
 
 #alert-box {
   position: fixed;
@@ -222,6 +220,11 @@ input:-webkit-autofill:active {
 .reveal {
   visibility: visible;
 }
+
+.tab {
+  opacity: .5;
+}
+
 
 @media screen and (max-width: 600px) {
   .main {

@@ -51,6 +51,8 @@ body {
   background-color: #262626;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Dancing Script", cursive;
+  font-family: "Karla", sans-serif;
 }
 hr {
   margin: 1rem 0;
@@ -76,10 +78,10 @@ h6,
 .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #fff;
+  color: #f3efe6;
 }
 h1,
 .h1 {
@@ -176,7 +178,7 @@ strong {
 }
 small,
 .small {
-  font-size: 0.875em;
+  font-size: 0.675em;
 }
 mark,
 .mark {
@@ -259,7 +261,6 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
-  
 }
 caption {
   padding-top: 0.5rem;
@@ -462,10 +463,40 @@ progress {
   font-weight: 700;
   line-height: 1.2;
 }
+
+.display-7 {
+  font-size: calc(0.4rem + 1.1vw);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #7c7b77;
+}
+
+.display-75 {
+  font-size: calc(0.4rem + 1.1vw);
+  font-weight: 600;
+  line-height: 1.6;
+  color: #f3efe6;
+}
+
+.display-8 {
+  font-size: calc(0.25rem + 1vw);
+  font-weight: 200;
+  line-height: 2;
+  color: #f3efe6;
+  opacity: 0.9;
+}
 @media (min-width: 1200px) {
   .display-6 {
     font-size: 2.5rem;
   }
+  
+}
+
+@media (max-width: 900px) {
+  .display-8, .display-75, .display-7 {
+    font-size: 1rem;
+  }
+  
 }
 .list-unstyled {
   padding-left: 0;
@@ -1615,7 +1646,7 @@ progress {
   margin-bottom: 1rem;
   color: #f3efe6;
   vertical-align: top;
-  border-color: #9DB2BF;
+  border-color: #9db2bf;
   border-radius: 20%;
 }
 .table > :not(caption) > * > * {
@@ -1804,7 +1835,7 @@ progress {
   font-size: 0.875rem;
 }
 
-.form-container{
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1846,7 +1877,6 @@ progress {
   background-color: #f3efe6;
   border-color: #f4ead5;
   outline: 0;
- 
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -6843,7 +6873,7 @@ fieldset:disabled .btn {
   background-color: #eb1616 !important;
 }
 .bg-secondary {
-  background-color: #3C4048!important;
+  background-color: #3c4048 !important;
 }
 .bg-success {
   background-color: #198754 !important;
