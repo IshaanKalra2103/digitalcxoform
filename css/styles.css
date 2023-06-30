@@ -217,15 +217,6 @@ input:-webkit-autofill:active {
   visibility: hidden;
 }
 
-.reveal {
-  visibility: visible;
-}
-
-.tab {
-  opacity: .5;
-}
-
-
 @media screen and (max-width: 600px) {
   .main {
     top: 80px;

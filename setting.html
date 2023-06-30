@@ -19,20 +19,22 @@
     />
 
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <script
+      src="https://kit.fontawesome.com/771f7f4cc8.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
     <link href="css/interact.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -44,42 +46,71 @@
         <div class="container-fluid pt-4 px-4">
           <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
-              <div class="bg-secondary rounded h-100 p-4">
-                <form onsubmit="event.preventDefault(); checkDirect();">
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >Email address</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      aria-describedby="emailHelp"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
-                      >Password</label
-                    >
-                    <input type="password" class="form-control" id="password" />
-                  </div>
+              <div class="bg-secondary rounded h-100 p-4 text-start">
+                <div class="mb-3 d-flex justify-content-between">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <label
+                    for="exampleInputEmail1"
+                    class="form-label text-start"
+                    id="email"
+                  ></label>
+                  <button
+                    type="submit"
+                    class="btn btn-sm btn-primary change-btn"
+                    id="email"
+                  >
+                    Change
+                  </button>
+                </div>
+                <div class="mb-3 d-flex justify-content-between">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <label
+                    for="exampleInputEmail1"
+                    class="form-label text-start"
+                    id="password"
+                  ></label>
 
-                  <button type="submit" class="btn btn-primary">Sign in</button>
-                </form>
+                  <button
+                    type="submit"
+                    class="btn btn-sm btn-primary change-btn"
+                    id="password"
+                  >
+                    Change
+                  </button>
+                </div>
 
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div class="d-flex justify-content-center p-2">
+                  <button type="submit" class="btn btn-primary" id="apply-btn">Apply</button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Content End -->
-
-          <!-- Back to Top -->
+    <div class="modal fade-in" id="changeModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button class="btn btn-primary close-btn">
+            <i class="fa fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="new" class="form-control" />
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success submit-btn">Submit</button>
         </div>
       </div>
     </div>
 
     <!-- Template Javascript -->
-    <script type="module" src="js/admin.js"></script>
+    <script type="module" src="js/setting.js"></script>
   </body>
 </html>
