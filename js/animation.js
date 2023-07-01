@@ -10,12 +10,11 @@ $(document).ready(function () {
   $("#arrow-up").click(function () {
     if (currentIndex > 0) {
       currentIndex--;
-      console.log(currentIndex);
     }
 
-    if (currentIndex != 8) {
+    if (currentIndex === 8) {
       $(".btn").addClass("hide");
-      $(".next-btn").addClass("reveal");
+      $(".next-btn").removeClass("hide");
     }
 
     showCurrentGroup();

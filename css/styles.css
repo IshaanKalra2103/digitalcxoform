@@ -222,3 +222,15 @@ input:-webkit-autofill:active {
     top: 80px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  input::placeholder {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  input::placeholder {
+    font-size: 55%;
+  }
+}
