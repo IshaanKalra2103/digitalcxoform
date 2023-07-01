@@ -36,36 +36,19 @@
   </head>
 
   <body>
-    <div class="container-fluid position-relative d-flex p-0 fade-in">
+    <div class="container-fluid p-5 fade-in">
       <!-- Content Start -->
-      <div class="content form-container">
+      <div class="content">
         <!-- Form Start -->
 
-        <div class="container-fluid pt-4 px-4">
-          <div class="row g-4">
+        <div class="container-fluid pt-4 px-4 text-start ">
+          <h1>You Do Not Have Admin Permissions</h1>
+          <div class="row g-4 ">
             <div class="col-sm-12 col-xl-6">
-              <div class="bg-secondary rounded h-100 p-4">
-                <form onsubmit="event.preventDefault(); checkDirect();">
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >Email address</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      aria-describedby="emailHelp"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
-                      >Password</label
-                    >
-                    <input type="password" class="form-control" id="password" />
-                  </div>
-
-                  <button class="btn btn-primary">Sign in</button>
-                </form>
+              <div class="h-100 py-2 ">
+                <button class="btn btn-danger btn-lg" onclick="direct()">
+                  Click Here To Proceed
+                </button>
               </div>
             </div>
           </div>
@@ -77,7 +60,10 @@
       </div>
     </div>
 
-    <!-- Template Javascript -->
-    <script type="module" src="js/admin.js"></script>
+    <script>
+      function direct(){
+        window.location.href = 'admin.html';
+      }
+    </script>
   </body>
 </html>

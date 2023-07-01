@@ -88,7 +88,10 @@
             </div>
             <div class="col-sm-3 col-xl-2">
               <div class="mt-3">
-                <button class="btn btn-lg btn-light" onclick="redirectSettings()">
+                <button
+                  class="btn btn-lg btn-light"
+                  onclick="redirectSettings()"
+                >
                   <i class="fa fa-gear text-primary me-3"></i>Settings
                 </button>
               </div>
@@ -186,6 +189,20 @@
           </div>
         </div>
         <!-- Data Table End -->
+
+        <div class="row g-4 d-flex justify-content-start">
+          <div class="col-sm-3 col-xl-12">
+            <div class="m-4">
+              <button
+                class="btn btn-sm btn-warning me-4"
+                onclick="help()"
+              >
+                Help
+                <i class="fa fa-question fa-sm"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Content End -->
     </div>
@@ -196,14 +213,29 @@
 
     <!-- Template Javascript -->
     <script>
+      window.onload = function () {
+        if (sessionStorage.getItem("authenticated") !== "true") {
+          window.location.href = "alert.html";
+        }
+      };
+
       function redirect() {
-        window.location.href = "index.html";
+        sessionStorage.setItem("authenticated", "false");
+        window.location.href = "admin.html";
       }
       function redirectEdit() {
         window.location.href = "release.html";
       }
       function redirectSettings() {
         window.location.href = "setting.html";
+      }
+      function help() {
+        alert(
+          "You can type in your problem in the prompt window that shall open shortly after this. Once, that is done your email messaging app shall open. You simply need to click on send after that :)"
+        );
+        let subject = "Help Regarding Website";
+        var body = prompt("Enter your problem: ");
+        window.location.href = `mailto:ishaankalra2004@gmail.com?subject=${subject}&body=${body}`;
       }
     </script>
 

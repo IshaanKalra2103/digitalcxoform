@@ -4,19 +4,20 @@ let keys;
 
 keysPromise.then((fetchedKeys) => {
   keys = fetchedKeys;
+  console.log(keys);
 });
 
 function checkDirect() {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  if (keys && email === keys.emailId && password === keys.key) {
+  if (email === keys.emailId && password === keys.key) {
+    sessionStorage.setItem('authenticated', 'true');
+    console.log("reached");
     window.location.href = "interact.html";
   } else {
     alert("Email/Password Incorrect");
   }
 }
 
-// Attach the function to the global scope if it's being used as an event handler in HTML
 window.checkDirect = checkDirect;
-
