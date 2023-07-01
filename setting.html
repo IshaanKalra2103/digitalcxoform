@@ -84,7 +84,9 @@
                 </div>
 
                 <div class="d-flex justify-content-center p-2">
-                  <button type="submit" class="btn btn-primary" id="apply-btn">Apply</button>
+                  <button type="submit" class="btn btn-primary" id="apply-btn">
+                    Apply
+                  </button>
                 </div>
               </div>
             </div>
@@ -110,6 +112,13 @@
       </div>
     </div>
 
+    <script>
+      window.onload = function () {
+        if (sessionStorage.getItem("authenticated") !== "true") {
+          window.location.href = "alert.html";
+        }
+      };
+    </script>
     <!-- Template Javascript -->
     <script type="module" src="js/setting.js"></script>
   </body>

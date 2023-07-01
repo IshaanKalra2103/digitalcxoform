@@ -101,6 +101,11 @@
       (function () {
         emailjs.init("t6djYgFTzyzt7g3gA");
       })();
+      window.onload = function () {
+        if (sessionStorage.getItem("authenticated") !== "true") {
+          window.location.href = "alert.html";
+        }
+      };
     </script>
 
     <script type="module" src="js/release.js"></script>
