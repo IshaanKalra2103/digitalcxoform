@@ -485,18 +485,19 @@ progress {
   color: #f3efe6;
   opacity: 0.9;
 }
+
 @media (min-width: 1200px) {
   .display-6 {
     font-size: 2.5rem;
   }
-  
 }
 
 @media (max-width: 900px) {
-  .display-8, .display-75, .display-7 {
+  .display-8,
+  .display-75,
+  .display-7 {
     font-size: 1rem;
   }
-  
 }
 .list-unstyled {
   padding-left: 0;

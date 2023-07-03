@@ -10,6 +10,7 @@ keysPromise.then((keys) => {
   let channelName;
   let channelLink;
   let channelDesc;
+  let channelCat;
 
   // Attach an event listener to the button
   document
@@ -18,6 +19,8 @@ keysPromise.then((keys) => {
       channelName = document.getElementById("channel-name").value;
       channelLink = document.getElementById("channel-link").value;
       channelDesc = document.getElementById("channel-desc").value;
+      channelCat = document.getElementById("channel-cat").value;
+
       fetch(fetchUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -26,6 +29,23 @@ keysPromise.then((keys) => {
           sendEmails(emails, channelName, channelLink, channelDesc);
         })
         .catch((error) => console.error("Error:", error));
+
+      fetch("https://digitalcxoapi-2abd74fc33cb.herokuapp.com/db", {
+        method: "PUT", // or 'POST'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          category: channelCat,
+          channelName: channelName,
+          link: channelLink,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     });
 
   // Define the function to send emails
