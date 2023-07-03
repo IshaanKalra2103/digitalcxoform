@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigitalCXO.Live</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #262626;
+        color: #f3efe6;
+        font-family: "Karla", sans-serif;
+        z-index: 1;
+      }
+      svg {
+        z-index: -100;
+        position: relative;
+        bottom: 40vh;
+      }
+      .navbar {
+        background: #c71585;
+      }
+      .jumbotron {
+        background: #262626;
+      }
+
+      .img-fluid {
+        max-width: 80%;
+        /* min-width: 10%; */
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">DigitalCXO.Live</a>
+    </nav>
+
+    <div class="main my-5">
+      <div class="container">
+        <h1 class="display-4" id="title">
+          The latest in digital transformation
+        </h1>
+        <p class="lead" id="subtitle">
+          A weekly newsletter on leveraging technology to transform your
+          business.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img
+            src="https://images.unsplash.com/photo-1655720033654-a4239dd42d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80"
+            class="img-fluid"
+            alt="Responsive image"
+          />
+          <h2>Artificial Intelligence</h2>
+          <p>Learn how AI and machine learning are impacting industries.</p>
+        </div>
+        <div class="col-sm">
+          <img
+            src="https://images.unsplash.com/photo-1655720035861-ba4fd21a598d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+            class="img-fluid"
+            alt="Responsive image"
+          />
+          <h2>Digital Platforms</h2>
+          <p>
+            Stay on the cutting edge of cloud, APIs, and digital ecosystems.
+          </p>
+        </div>
+        <div class="col-sm">
+          <img
+            src="https://images.unsplash.com/photo-1664448288134-669f14c3ebbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+            class="img-fluid"
+            alt="Responsive image"
+          />
+          <h2>Cybersecurity</h2>
+          <p>Best practices for securing your digital infrastructure.</p>
+        </div>
+      </div>
+    </div>
+
+    <svg id="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200">
+      <path
+        id="line-path"
+        d="M10,100 Q500,50 990,100"
+        stroke="white"
+        stroke-width="3"
+        fill="transparent"
+      />
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+      // Fade in and slide up feature sections
+      // Get a reference to the <path>
+      var path = document.querySelector("#line-path");
+
+      // Get length of path... ~577px in this case
+      var pathLength = path.getTotalLength();
+
+      // Make very long dashes (the length of the path itself)
+      path.style.strokeDasharray = pathLength + " " + pathLength;
+
+      // Offset the dashes so the it appears hidden entirely
+      path.style.strokeDashoffset = pathLength;
+
+      // Jake Archibald says so
+      // https://jakearchibald.com/2013/animated-line-drawing-svg/
+      path.getBoundingClientRect();
+
+      // When the page scrolls...
+      window.addEventListener("scroll", function (e) {
+        // What % down is it?
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        // Length to offset the dashes
+        var drawLength = pathLength * scrollPercentage;
+
+        // Draw in reverse
+        path.style.strokeDashoffset = pathLength - drawLength;
+
+        // When complete, remove the dash array, otherwise shape isn't quite sharp
+        // Accounts for fuzzy math
+        if (scrollPercentage >= 0.99) {
+          path.style.strokeDasharray = "none";
+        } else {
+          path.style.strokeDasharray = pathLength + " " + pathLength;
+        }
+      });
+
+      const title = document.getElementById("title");
+      title.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 1500,
+        iterations: 1,
+      });
+
+      const subtitle = document.getElementById("subtitle");
+      subtitle.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 1500,
+        iterations: 1,
+      });
+      const sections = document.querySelectorAll(".col-sm");
+      sections.forEach((section) => {
+        section.animate(
+          [
+            { opacity: 0, transform: "translateY(25%)" },
+            { opacity: 1, transform: "translateY(0)" },
+          ],
+          {
+            duration: 1000,
+            iterations: 1,
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

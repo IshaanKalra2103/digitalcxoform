@@ -109,7 +109,6 @@ function sendMail() {
       .send(serviceID, templateID, params)
       .then((res) => {
         console.log(res);
-        showAlert("Your message sent successfully!!");
       })
       .catch((err) => console.log(err));
   } else {
@@ -132,10 +131,10 @@ $("#alert-close").click(function () {
   setTimeout(function () {
     $("#alert-box").addClass("hide");
   }, 2000);
-  
+
   setTimeout(() => {
     window.location.href = "greeting.html";
-  }, 2000);// delay equal to the duration of the fade-out animation
+  }, 2000); // delay equal to the duration of the fade-out animation
 });
 
 $("#sbmt-btn").click(function () {
