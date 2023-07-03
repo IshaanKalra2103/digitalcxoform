@@ -91,6 +91,10 @@ body {
   font-size: 22px;
 }
 
+.access {
+  color: #f3efe6 !important;
+}
+
 a {
   color: #f3efe6;
   font-size: 60%;
