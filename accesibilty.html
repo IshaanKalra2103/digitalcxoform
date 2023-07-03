@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigitalCXO.Live</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+
+    <!-- CSS StyleSheets -->
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Javascript Scripts -->
+
+    <!-- EmailJs -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("t6djYgFTzyzt7g3gA");
+      })();
+    </script>
+
+    <!-- Bootstrap JS -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Spreadsheet API -->
+    <script type="module" src="./js/form.js"></script>
+  </head>
+  <body class="fade-in">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-between">
+          <h1 class="display-3">Discover Digital CXO.Live!</h1>
+          <a
+          class="btn btn-outline-light m-4"
+          style="opacity: 1; height: 10%;"
+          href="./form.html"
+          >Normal View</a
+        >
+        </div>
+        <div class="row">
+          <h3 class="mx-2" style="opacity: 0.7">
+            Enter Your Details to get started!
+          </h3>
+        </div>
+      </div>
+
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="col-xl-7">
+          <form id="myForm">
+            <div class="row">
+              <label>Your Email</label>
+              <input
+                type="email"
+                class="form-input"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="row">
+              <label>Your Name</label>
+              <input
+                name="Name"
+                type="text"
+                class="form-input"
+                id="name"
+                aria-describedby="emailHelp"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label>Mobile number</label>
+              <input
+                name="Mobile"
+                type="text"
+                class="form-input"
+                id="phone"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label>Your LinkedIn link</label>
+              <input
+                name="Linkedin"
+                type="text"
+                class="form-input"
+                id="linkedin"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label>Your current company</label>
+              <input
+                name="Company"
+                type="text"
+                class="form-input"
+                id="company"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label>Your designation or role</label>
+              <input
+                name="Role"
+                type="text"
+                class="form-input"
+                id="role"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label>Functional area</label>
+
+              <select class="form-input" id="functional-area" required>
+                <option value="nulls" selected disabled>
+                  Select an option
+                </option>
+                <option value="Tech - CXO (CIO, CDO, CTO, CISO)">
+                  Tech - CXO (CIO, CDO, CTO, CISO)
+                </option>
+                <option value="Startup - CXO">Startup - CXO</option>
+                <option value="Tech - Architect">Tech - Architect</option>
+                <option value="Tech - Project Manager">
+                  Tech - Project Manager
+                </option>
+                <option value="Tech - Programmer">Tech - Programmer</option>
+                <option value="Business - CXO (Leadership)">
+                  Business - CXO (Leadership)
+                </option>
+                <option value="Business - Sales">Business - Sales</option>
+                <option value="Business - Marketing">
+                  Business - Marketing
+                </option>
+                <option value="Business - Alliance">Business - Alliance</option>
+              </select>
+            </div>
+            <div class="row">
+              <label>Top 3 skills</label>
+              <input
+                name="Skills"
+                type="text"
+                class="form-input"
+                id="skills"
+                placeholder="Type your answer here..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label
+                >Any other areas of interest that you want from this forum
+                <small>(Optional)</small></label
+              >
+              <input
+                name="Interests"
+                type="text"
+                class="form-input"
+                id="other"
+                placeholder="Type your answer here..."
+              />
+            </div>
+          </form>
+
+          <center>
+            <button class="btn btn-lg my-4 text-center w-25" id="sbmt-btn">
+              Submit
+            </button>
+          </center>
+        </div>
+
+        <div class="d-flex justify-content-center my-4"></div>
+      </div>
+    </div>
+
+    <div id="alert-box" class="hide">
+      <div class="alert-content">
+        <p id="alert-message"></p>
+        <button class="btn btn-sm" id="alert-close">Close</button>
+      </div>
+    </div>
+  </body>
+
+  <!-- Additional JS -->
+  <script type="module" src="./js/animation.js"></script>
+</html>
